@@ -12,7 +12,7 @@ function Banner() {
             <div className='banner_center'>
                 <div className='banner_text'>
                     <p>Hello folks,</p>
-                    <p>Nice to meet you!</p>
+                    <p>Welcome to easyNote!!</p>
                 </div>
 
             </div>

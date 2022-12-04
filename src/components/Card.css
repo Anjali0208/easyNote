@@ -43,6 +43,7 @@
 
   */
 
+
 .card{
   justify-content: space-between;
   padding: 10px;
@@ -55,6 +56,10 @@
 
   .card:hover{
     border-left: 5px solid blueviolet;
+    /* transition-duration: 4s;
+    transition-delay: 2s; */
+    background-color: rgb(245, 207, 245);
+    transition: transform 1s;
   }
 
 

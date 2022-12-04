@@ -1,0 +1,23 @@
+.table {
+    box-shadow: 0 4px 8px 0 #f8edeed0;
+    /* border-collapse: collapse; */
+   transition: 0.3s;
+   width: 40%;
+   border-radius: 5px;
+   margin-left: 70px;
+   text-align: left;
+
+  
+}
+
+.table:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+
+.flex{
+    display: flex;
+    justify-content: space-around;
+    
+    
+}

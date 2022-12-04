@@ -1,11 +1,11 @@
 import React from 'react'
 import Banner from './Banner'
 import Card from "./Card"
-import Footer from './Footer'
 import Headline from './Headline'
 import { Link } from 'react-router-dom'
 import "./Home.css"
 import Header from './Header'
+import Card2 from './Card2'
 
 function Home() {
     return (
@@ -17,6 +17,9 @@ function Home() {
                 <div className='home_card'>
                     <Card />
                 </div>
+                {/* <div className='home_card'>
+                    <Card2 />
+                </div> */}
 
                 <Link to="/footer">Footer</Link>
 
