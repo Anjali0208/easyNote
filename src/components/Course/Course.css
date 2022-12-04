@@ -1,0 +1,16 @@
+.course{
+  margin-top: 110px;
+}
+
+.course >h1{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    color: grey;
+}
+
+
+.course > p{
+    margin-top: 10px;
+    text-align: center;
+    font-size: 15px;
+}

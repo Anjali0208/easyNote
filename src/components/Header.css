@@ -1,11 +1,10 @@
 .header {
     position: fixed;
+    top: 0;
+    overflow: hidden;
     padding: 10px;   
-    /* top: 0; */
-    /* padding: 20px; */
-    width: 100%;
-    z-index: 1;
     display: flex;
+    width: 100%;   
     align-items: center;
     background-color: purple;
     color: white;
@@ -20,13 +19,12 @@
 
 .logo_name {
     padding-top: 5px;
-    
 }
 
 .blog{
     padding-top: 7px;
     padding-left: 30px ;
-    display: flex;
+    
     justify-content: space-around;
     
 }
@@ -34,8 +32,6 @@
 .about{
     padding-top: 7px;
     padding-left: 30px ;
-
-    display: flex;
     justify-content: space-around;
     
 }

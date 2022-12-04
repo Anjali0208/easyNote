@@ -1,16 +1,22 @@
 import './App.css';
-import Banner from './components/Banner';
-import Card from './components/Card';
-import Header from './components/Header';
-import Headline from './components/Headline';
 import Home from './components/Home';
-import Syllabus from './components/Syllabus';
+import { Routes, Route } from 'react-router-dom';
+import Blog from "./components/Blog"
+import Contact from "./components/Contact"
+import Course from './components/Course/Course';
+import Header from './components/Header';
 
 function App() {
   return (
     <>
-      <Header />
-      <Home />
+
+      <Routes >
+        <Route path="/" element={<Home />} />
+        <Route path="/blog" element={<Blog />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path='/course' element={<Course />} />
+      </Routes>
+
 
 
     </>
