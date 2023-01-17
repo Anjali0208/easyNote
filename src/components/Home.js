@@ -5,7 +5,7 @@ import Headline from './Headline'
 import { Link } from 'react-router-dom'
 import "./Home.css"
 import Header from './Header'
-import Card2 from './Card2'
+
 
 function Home() {
     return (
@@ -17,9 +17,9 @@ function Home() {
                 <div className='home_card'>
                     <Card />
                 </div>
-                {/* <div className='home_card'>
-                    <Card2 />
-                </div> */}
+                <div className='home_card'>
+                    <Card />
+                </div>
 
                 <Link to="/footer">Footer</Link>
 

@@ -15,16 +15,19 @@
     font-size: 15px;
 }
 
-.first >h3 {
+/* .first >h3 {
   float: left;
   clear: left;
   margin-bottom: 20px;
+} */
+
+.link{
+  text-decoration: none;
+  color: grey;
+  line-height: 2;
+  font-weight: 600;
 }
 
-
-.first > li {
-  display: list-item;
-  float: left;
-  clear: left; 
+.link:hover{
+  background-color: #ccc;
 }
-

@@ -3,10 +3,9 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Header from '../Header'
 import "./Course.css"
-import { NavLink, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 function Course() {
-
 
     return (
         <>
@@ -15,9 +14,7 @@ function Course() {
                 <h1>
                     MCA Course
                 </h1>
-                <p>These are all the courses in MCA course offered by IPU. MCA have 116 credits</p>
-
-
+                <p>These are all the courses in MCA course offered by IPU. MCA have `` credits</p>
 
                 <Row style={{
                     display: "flex",
@@ -26,28 +23,44 @@ function Course() {
                     marginTop: "80px",
 
                 }}>
+                    <h3 style={{ marginBottom: "30px", fontWeight: "bold" }}>First Semester</h3>
                     <Col>
-                        <ul className='first'>
-                            <h3>First Semester</h3>
-                            <li>
-                                <Link to="/ds" style={{ textDecoration: "none", color: "grey", lineHeight: "2", fontWeight: "600" }}>Discrete Structure</Link>
-                            </li>
-                            <li><NavLink to="" className={({ isActive }) =>
-                                isActive ? "nav-link active" : 'nav-link'
-                            } style={{ textDecoration: "none", color: "grey", lineHeight: "2", fontWeight: "600" }}>Computer Networks</NavLink></li>
-                            <li><Link to="" style={{ textDecoration: "none", color: "grey", lineHeight: "2", fontWeight: "600" }}>Operating Systems with Linux</Link></li>
-                            <li><Link to="" style={{ textDecoration: "none", color: "grey", lineHeight: "2", fontWeight: "600" }}>Database Management Systems</Link></li>
-                            <li><Link to="" style={{ textDecoration: "none", color: "grey", lineHeight: "2", fontWeight: "600" }}>Object Oriented Programming and JAVA</Link></li>
-                            <li><Link to="" style={{ textDecoration: "none", color: "grey", lineHeight: "2", fontWeight: "600" }}>Computer Networks Lab</Link></li>
-                            <li><Link to="" style={{ textDecoration: "none", color: "grey", lineHeight: "2", fontWeight: "600" }}>Operating Systems with Linux Lab</Link></li>
-                            <li><Link to="" style={{ textDecoration: "none", color: "grey", lineHeight: "2", fontWeight: "600" }}>Database Management Systems Lab</Link></li>
-                            <li><Link to="" style={{ textDecoration: "none", color: "grey", lineHeight: "2", fontWeight: "600" }}>Object Oriented Programming and JAVA Lab</Link></li>
-                            <li><Link to="" style={{ textDecoration: "none", color: "grey", lineHeight: "2", fontWeight: "600" }}>Minor Project - I</Link></li>
-                            <li><Link to="" style={{ textDecoration: "none", color: "grey", lineHeight: "2", fontWeight: "600" }}>Professional Proficiency - I</Link></li>
-                        </ul>
+
+                        <p><Link to="/ds" className='link'>Discrete Structure</Link></p>
+
+                        <p>
+                            <Link to="" className="link">
+                                Computer Networks
+                            </Link></p>
+
+
+                        <p><Link to="" className='link'>Operating Systems with Linux</Link></p>
+
+                        <p> <Link to="" className='link'>Object Oriented Programming and JAVA Lab</Link></p>
+
                     </Col>
 
-                    <Col >
+                    <Col>
+
+                        <p><Link to="" className='link'>Database Management Systems</Link></p>
+                        <p><Link to="" className='link'>Operating Systems with Linux Lab</Link></p>
+                        <p><Link to="" className='link'>Database Management Systems Lab</Link></p>
+                        <p><Link to="" className='link'>Professional Proficiency - I</Link></p>
+
+                    </Col>
+
+
+                    <Col>
+
+                        <p><Link to="" className='link'>Object Oriented Programming and JAVA</Link></p>
+                        <p> <Link to="" className='link'>Computer Networks Lab</Link></p>
+                        <p><Link to="" className='link'>Minor Project - I</Link></p>
+
+                    </Col>
+
+                </Row>
+
+                {/* <Col >
                         <ul className='first'>
                             <h3>Second Semester</h3>
                             <li><Link to="" style={{ textDecoration: "none", color: "grey", lineHeight: "2", fontWeight: "600" }}>Data and File Structures</Link></li>
@@ -71,8 +84,10 @@ function Course() {
                             <li ><Link style={{ textDecoration: "none", color: "grey", lineHeight: "2", fontWeight: "600" }}>Information Security</Link></li>
 
                         </ul>
-                    </Col>
-                    <Col>
+                    </Col> */}
+
+
+                {/* <Col>
                         <ul className='first'>
                             <h3>Second semester continue</h3>
                             <li style={{ fontWeight: "800" }}>OPEN ELECTIVE-1 (choose any ONE)</li>
@@ -85,10 +100,14 @@ function Course() {
                         </ul>
 
 
-                    </Col>
+                    </Col> */}
 
-                </Row>
-                <Row style={{
+
+
+
+
+
+                {/* <Row style={{
                     display: "flex",
                     textAlign: "center",
                     justifyContent: "space-evenly",
@@ -158,7 +177,7 @@ function Course() {
                         </ul>
                     </Col>
 
-                </Row>
+                </Row> */}
 
 
             </div>
