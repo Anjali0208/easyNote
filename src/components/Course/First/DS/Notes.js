@@ -1,7 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import { ref, getDownloadURL, listAll } from "firebase/storage";
 import { storage } from "../../../../firebase";
 import { create } from "@mui/material/styles/createTransitions";
+import { Box, Button, Container, Paper, TableBody, TableCell, TableContainer, TableRow, Typography } from "@mui/material";
+import { Table } from "react-bootstrap";
 // import { Button } from "./Button"
 // import { Modal } from "./Modal"
 
@@ -11,84 +13,72 @@ export default function BasicTable() {
 
     const [data, setData] = useState([]);
 
-    // const fileRef = ref(storage, 'MCA/First/First_Sem');
-    // // console.log('fileRef=>', fileRef)
-    // listAll(fileRef).then(res => {
-    //     // console.log('ress', res)
-    //     res.items.forEach((folderRef) => {
-    //         console.log('fold', folderRef)
-    //         listAll(folderRef).then(res => console.log('file', res))
-    //         // console.log('getDownloadURL', getDownloadURL(ref(storage, folderRef.fullPath)).then(res => console.log(res)))
-    //     });
-    // }).catch(err => console.log(err))
-
-    // const link = () => {
-    //     getDownloadURL(ref(storage, 'MCA/First/First_Sem/Sets.pdf'))
-    //         .then((url) => {
-    //             console.log(url);
-    //             
-    //             const win = window.open(url, '_blank');
-    //             if (win != null) {
-    //                 win.focus();
-    //             }
-    //         })
-    //         .catch((error) => {
-    //             console.log(error);
-    //         })
-    // }
-
+    useEffect(() => {
+        link()
+    }, [])
 
     const listRef = ref(storage, 'MCA/First/First_Sem/');
-    const link = () => {
-        listAll(listRef)
+
+    const link = useCallback(async () => {
+        await listAll(listRef)
             .then(res => {
                 res.items.forEach((item) => {
                     setData(arr => [...arr, item.name]);
-                    console.log(item.name);
-                    getDownloadURL(ref(storage, item.name))
-                        .then((url) => {
-                            const win = window.open(url, '_blank');
-                            if (win != null) {
-                                win.focus();
-                            }
-                        })
                 })
             })
             .catch(err => {
                 alert(err.message);
             })
+    }, [])
+
+
+    const download = (name) => {
+        getDownloadURL(ref(storage, `MCA/First/First_Sem/${name}`))
+            .then((url) => {
+                const win = window.open(url, '_blank');
+                if (win != null) {
+                    win.focus();
+                }
+            })
+            .catch((error) => {
+                console.log(error);
+            })
     }
 
-    // const download = () => {
-    //     getDownloadURL(ref(storage, `MCA/First/First_Sem/Sets.pdf`))
-    //         .then((url) => {
-    //             console.log(url);
-
-    //             const win = window.open(url, '_blank');
-    //             if (win != null) {
-    //                 win.focus();
-    //             }
-    //         })
-    //         .catch((error) => {
-    //             console.log(error);
-    //         })
-    // }
-
+    const RenderTable = ({ data }) => {
+        return (
+            <TableContainer component={Paper} style={{ borderRadius: "10px", width: '50%', margin: "40px" }}>
+                <Table aria-label="simple table">
+                    <TableBody>
+                        {data.map((title) => {
+                            return (
+                                <TableRow>
+                                    <TableCell>
+                                        {title}
+                                    </TableCell>
+                                    <TableCell>
+                                        <Button onClick={() => download(title)}>
+                                            Download
+                                        </Button>
+                                    </TableCell>
+                                </TableRow>
+                            )
+                        })}
+                    </TableBody>
+                </Table>
+            </TableContainer>
+        )
+    }
 
     return (
-        <div className="container">
-            <br></br>
-            <button onClick={link}>List</button>
-
-            <br /><br />
-            {
-                data.map((val) => (
-                    <button onClick={link}>{val}</button>
-
-                ))
-            }
-
-        </div>
+        <Container className="container">
+            <Box margin='25px 0px 0px 25px'>
+                <Typography variant="h5">
+                    Download Notes
+                </Typography>
+            </Box>
+            <RenderTable data={data} />
+        </Container>
 
     );
 }
