@@ -1,7 +1,6 @@
-import React, { useState, useEffect, useCallback } from "react";
+import React, { useState, useEffect } from "react";
 import { ref, getDownloadURL, listAll } from "firebase/storage";
 import { storage } from "../../../../firebase";
-import { create } from "@mui/material/styles/createTransitions";
 import { Box, Button, Container, Paper, TableBody, TableCell, TableContainer, TableRow, Typography } from "@mui/material";
 import { Table } from "react-bootstrap";
 // import { Button } from "./Button"
@@ -19,7 +18,7 @@ export default function BasicTable() {
 
     const listRef = ref(storage, 'MCA/First/First_Sem/');
 
-    const link = useCallback(async () => {
+    const link = async () => {
         await listAll(listRef)
             .then(res => {
                 res.items.forEach((item) => {
@@ -29,7 +28,7 @@ export default function BasicTable() {
             .catch(err => {
                 alert(err.message);
             })
-    }, [])
+    }
 
 
     const download = (name) => {
