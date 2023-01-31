@@ -7,35 +7,35 @@ import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
 
 
-export default function BasicTable() {
+export default function BasicTable({ title, sn, cc, nc, sem, ec }) {
     return (
-        <TableContainer component={Paper} style={{ borderRadius: "10px", width: "500px", margin: "40px" }}>
+        <TableContainer component={Paper} style={{ borderRadius: "10px", width: "550px", margin: "40px" }}>
             <Table sx={{ minWidth: 650 }} aria-label="simple table">
 
                 <TableBody>
                     <TableRow>
                         <TableCell>Title</TableCell>
-                        <TableCell>Discrete Structure</TableCell>
+                        <TableCell>{title}</TableCell>
                     </TableRow>
                     <TableRow>
                         <TableCell>Short Name</TableCell>
-                        <TableCell>DS</TableCell>
+                        <TableCell>{sn}</TableCell>
                     </TableRow>
                     <TableRow>
                         <TableCell>Course Code</TableCell>
-                        <TableCell>MCA101</TableCell>
+                        <TableCell>{cc}</TableCell>
                     </TableRow>
                     <TableRow>
                         <TableCell>Nature of Code</TableCell>
-                        <TableCell>Theory</TableCell>
+                        <TableCell>{nc}</TableCell>
                     </TableRow>
                     <TableRow>
                         <TableCell>Semester</TableCell>
-                        <TableCell>First</TableCell>
+                        <TableCell>{sem}</TableCell>
                     </TableRow>
                     <TableRow>
                         <TableCell>Elective/Compulsary</TableCell>
-                        <TableCell>Compulsary</TableCell>
+                        <TableCell>{ec}</TableCell>
                     </TableRow>
                 </TableBody>
             </Table>

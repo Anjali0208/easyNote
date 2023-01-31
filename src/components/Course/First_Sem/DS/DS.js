@@ -13,7 +13,7 @@ import { Link } from "react-router-dom"
 function DS() {
     return (
         <>
-            <Header />
+
             <div className='course'>
                 <h1>Discrete Structure (MCA-101)</h1>
             </div>
@@ -24,11 +24,11 @@ function DS() {
                     <Button variant="outlined">Syllabus</Button>
                 </Link>
 
-                <Link to="/notes" style={{ textDecoration: "none", marginRight: "20px" }}>
+                <Link to="/notes_ds" style={{ textDecoration: "none", marginRight: "20px" }}>
                     <Button variant="outlined">Notes</Button>
                 </Link>
 
-                <Link to="qp" style={{ textDecoration: "none" }}>
+                <Link to="/ds_qp" style={{ textDecoration: "none" }}>
                     <Button variant="outlined">Question Paper</Button>
                 </Link>
             </div>
@@ -37,7 +37,7 @@ function DS() {
             </div>
 
             {/* Description table */}
-            <Tables />
+            <Tables title="Discrete Mathematics" sn="DS" cc="MCA101" nc="Theory" sem="First" ec="Complusary" />
 
 
             {/* COURSE DESCRIPTION */}

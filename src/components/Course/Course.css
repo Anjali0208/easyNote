@@ -1,5 +1,15 @@
+.second{
+  box-sizing: border-box;
+  display: block;
+  text-align: left;
+}
+
+
+li{
+  list-style-type: none;  
+}
 .course{
-  margin-top: 110px;
+  margin-top: 150px;
 }
 
 .course > h1{

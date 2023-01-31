@@ -5,15 +5,15 @@ export const menuItems = [
         submenu: [
             {
                 title: 'MCA',
-                url: '/',
+                url: '',
                 submenu: [
                     {
                         title: 'First Year',
-                        url: 'course_mca'
+                        url: 'course_mca_first'
                     },
                     {
                         title: 'Second Year',
-                        url: 'second'
+                        url: 'course_mca_second'
                     }
                 ]
             },

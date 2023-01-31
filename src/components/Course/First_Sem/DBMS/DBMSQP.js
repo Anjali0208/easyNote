@@ -1,25 +1,17 @@
 import React, { useState, useEffect } from "react";
 import { ref, getDownloadURL, listAll } from "firebase/storage";
 import { storage } from "../../../../firebase";
-import { Box, Button, Container, Paper, TableBody, TableCell, TableContainer, TableRow, Typography } from "@mui/material";
-import { Table } from "react-bootstrap";
-// import { Button } from "./Button"
-// import { Modal } from "./Modal"
+import { Box, Table, Button, Container, Paper, TableBody, TableCell, TableContainer, TableRow, Typography } from "@mui/material";
+import Header from "../../../Header";
 
 
-
-export default function BasicTable() {
+export default function BasicTable1() {
 
     const [data, setData] = useState([]);
 
     useEffect(() => {
-        link()
-    }, [])
-
-    const listRef = ref(storage, 'MCA/First/First_Sem/');
-
-    const link = async () => {
-        await listAll(listRef)
+        const listRef = ref(storage, 'MCA/First/First_Sem/DBMS/DBMS_qp/');
+        listAll(listRef)
             .then(res => {
                 res.items.forEach((item) => {
                     setData(arr => [...arr, item.name]);
@@ -28,11 +20,10 @@ export default function BasicTable() {
             .catch(err => {
                 alert(err.message);
             })
-    }
-
+    }, [])
 
     const download = (name) => {
-        getDownloadURL(ref(storage, `MCA/First/First_Sem/${name}`))
+        getDownloadURL(ref(storage, `MCA/First/First_Sem/DBMS/DBMS_qp/${name}`))
             .then((url) => {
                 const win = window.open(url, '_blank');
                 if (win != null) {
@@ -44,7 +35,7 @@ export default function BasicTable() {
             })
     }
 
-    const RenderTable = ({ data }) => {
+    const Listing = ({ data }) => {
         return (
             <TableContainer component={Paper} style={{ borderRadius: "10px", width: '50%', margin: "40px" }}>
                 <Table aria-label="simple table">
@@ -70,14 +61,16 @@ export default function BasicTable() {
     }
 
     return (
-        <Container className="container">
-            <Box margin='25px 0px 0px 25px'>
-                <Typography variant="h5">
-                    Download Notes
-                </Typography>
-            </Box>
-            <RenderTable data={data} />
-        </Container>
+        <>
 
+            <Container className="container">
+                <Box margin='25px 0px 0px 25px'>
+                    <Typography variant="h5">
+                        DBMS Question Paper
+                    </Typography>
+                </Box>
+                <Listing data={data} />
+            </Container>
+        </>
     );
 }

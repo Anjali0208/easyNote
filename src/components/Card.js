@@ -25,23 +25,8 @@ function Cards() {
                         </Card.Subtitle>
                         <Link to="/course" style={{ fontSize: "large", textDecoration: "none" }}>
 
-                            {/* <Button variant="primary"
-                            style={{
-                                cursor: "pointer",
-                                marginTop: "20px",
-                                height: "2rem",
-                                width: "4rem",
-                                borderRadius: "5px",
-                                boxShadow: "2px 2px purple",
-                                backgroundColor: "rgb(230, 161, 230)",
-                                font: "message-box",
-                                color: "black",
-                                fontSize: "large"
-                            }}>GO
-
-                        </Button> */}
-
                             <Navbar />
+
 
                         </Link>
 
@@ -59,13 +44,60 @@ function Cards() {
 
                         </Card.Subtitle>
                         <Link to="/exam" style={{ fontSize: "large", textDecoration: "none" }}>
-                            {/* <Navbar /> */}
+                            <Button variant="primary"
+                                style={{
+                                    cursor: "pointer",
+                                    marginTop: "20px",
+                                    height: "3rem",
+                                    width: "6rem",
+                                    borderRadius: "5px",
+                                    boxShadow: "2px 2px purple",
+                                    backgroundColor: "rgb(230, 161, 230)",
+                                    font: "message-box",
+                                    color: "black",
+                                    fontSize: "large"
+                                }}>Coming soon
+
+                            </Button>
                         </Link>
 
                     </Card.Body>
                 </Card>
 
-                <Card style={{ width: '22rem', height: "15rem" }}>
+
+                <Card style={{ width: '22rem', height: "18rem" }}>
+                    <AiFillNotification style={{ height: "4rem", fontSize: '40px' }} />
+                    <Card.Body>
+                        <Card.Title style={{ fontSize: "20px", height: "3rem" }}>News and Notice</Card.Title>
+                        <Card.Subtitle>
+                            Find News and Notice about exams and
+                            other events in our notice section.
+
+                        </Card.Subtitle>
+                        <Link to="/exam" style={{ fontSize: "large", textDecoration: "none" }}>
+                            <Button variant="primary"
+                                style={{
+                                    cursor: "pointer",
+                                    marginTop: "20px",
+                                    height: "3rem",
+                                    width: "6rem",
+                                    borderRadius: "5px",
+                                    boxShadow: "2px 2px purple",
+                                    backgroundColor: "rgb(230, 161, 230)",
+                                    font: "message-box",
+                                    color: "black",
+                                    fontSize: "large"
+                                }}>Coming soon
+
+                            </Button>
+                        </Link>
+
+                    </Card.Body>
+                </Card>
+
+
+
+                {/* <Card style={{ width: '22rem', height: "15rem" }}>
                     <AiFillNotification style={{ height: "4rem", fontSize: '40px' }} />
                     <Card.Body>
                         <Card.Title style={{ fontSize: "20px", height: "3rem" }}>News and Notice</Card.Title>
@@ -74,24 +106,24 @@ function Cards() {
                             other events in our notice section.
                         </Card.Subtitle>
                         <Link to="/news" style={{ fontSize: "large", textDecoration: "none" }}>
-                            <Button variant="primary"
+                        <Button variant="primary"
                                 style={{
+                                    cursor: "pointer",
                                     marginTop: "20px",
-                                    height: "2rem",
-                                    width: "4rem",
+                                    height: "3rem",
+                                    width: "6rem",
                                     borderRadius: "5px",
                                     boxShadow: "2px 2px purple",
                                     backgroundColor: "rgb(230, 161, 230)",
-                                    cursor: "pointer",
                                     font: "message-box",
                                     color: "black",
                                     fontSize: "large"
-                                }} >
-                                Go
+                                }}>Coming soon
+
                             </Button>
                         </Link>
                     </Card.Body>
-                </Card>
+                </Card> */}
             </div>
 
 
