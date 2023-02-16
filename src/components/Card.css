@@ -24,5 +24,17 @@
   justify-content: space-between;
 }
 
+a.link{
+  text-decoration: none;
+  color: blueviolet;
+  background-color: none;
+  font-weight: 400;
+  
+
+}
+
+a.link:hover {
+  background-color: transparent;
+}
 
 

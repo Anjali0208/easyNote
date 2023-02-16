@@ -9,7 +9,7 @@ li{
   list-style-type: none;  
 }
 .course{
-  margin-top: 150px;
+  margin-top: 80px;
 }
 
 .course > h1{
@@ -18,26 +18,19 @@ li{
     color: grey;
 }
 
-
 .course > p{
     margin-top: 10px;
     text-align: center;
     font-size: 15px;
 }
 
-/* .first >h3 {
-  float: left;
-  clear: left;
-  margin-bottom: 20px;
-} */
-
-.link{
+.sub{
   text-decoration: none;
   color: grey;
   line-height: 2;
   font-weight: 600;
 }
 
-.link:hover{
-  background-color: #ccc;
+.sub:hover{
+  background-color: none;
 }

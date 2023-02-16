@@ -10,7 +10,7 @@ export default function BasicTable() {
     const [data, setData] = useState([]);
 
     useEffect(() => {
-        const listRef = ref(storage, 'MCA/First/First_Sem/DS/DS/');
+        const listRef = ref(storage, 'MCA/First/First_Sem/OS/OS/');
         listAll(listRef)
             .then(res => {
                 res.items.forEach((item) => {
@@ -23,7 +23,7 @@ export default function BasicTable() {
     }, [])
 
     const download = (name) => {
-        getDownloadURL(ref(storage, `MCA/First/First_Sem/DS/DS/${name}`))
+        getDownloadURL(ref(storage, `MCA/First/First_Sem/OS/OS/${name}`))
             .then((url) => {
                 const win = window.open(url, '_blank');
                 if (win != null) {
@@ -66,7 +66,7 @@ export default function BasicTable() {
             <Container className="container">
                 <Box margin='25px 0px 0px 25px'>
                     <Typography variant="h5">
-                        Discrete Mathematics Notes
+                        Operating System Notes
                     </Typography>
                 </Box>
                 <Listing data={data} />

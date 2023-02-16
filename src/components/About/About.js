@@ -96,4 +96,3 @@ function About() {
 
 export default About
 
-// https://www.google.com/https://www.static-contents.youth4work.com/university/Documents/Colleges/CollegeImages/50330d91-2795-48f1-8233-a006e1fa0294.jpg

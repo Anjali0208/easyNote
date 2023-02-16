@@ -24,10 +24,7 @@ function Cards() {
 
                         </Card.Subtitle>
                         <Link to="/course" style={{ fontSize: "large", textDecoration: "none" }}>
-
                             <Navbar />
-
-
                         </Link>
 
 
@@ -35,7 +32,7 @@ function Cards() {
                 </Card>
 
 
-                <Card style={{ width: '22rem', height: "18rem" }}>
+                {/* <Card style={{ width: '22rem', height: "18rem" }}>
                     <GiWhiteBook style={{ height: "4rem", fontSize: '40px' }} />
                     <Card.Body>
                         <Card.Title style={{ fontSize: "20px", height: "3rem" }}>Exam Content</Card.Title>
@@ -62,7 +59,7 @@ function Cards() {
                         </Link>
 
                     </Card.Body>
-                </Card>
+                </Card> */}
 
 
                 <Card style={{ width: '22rem', height: "18rem" }}>
@@ -74,8 +71,8 @@ function Cards() {
                             other events in our notice section.
 
                         </Card.Subtitle>
-                        <Link to="/exam" style={{ fontSize: "large", textDecoration: "none" }}>
-                            <Button variant="primary"
+                        {/* <Link to="" style={{ fontSize: "large", textDecoration: "none" }} className=""> */}
+                        {/* <Button variant="primary"
                                 style={{
                                     cursor: "pointer",
                                     marginTop: "20px",
@@ -88,42 +85,13 @@ function Cards() {
                                     color: "black",
                                     fontSize: "large"
                                 }}>Coming soon
-
-                            </Button>
-                        </Link>
+                            </Button> */}
+                        <a href="https://bciit.ac.in/notice.php" target="_blank" rel="noopener noreferrer" className="link">GO</a>
+                        {/* </Link> */}
 
                     </Card.Body>
                 </Card>
 
-
-
-                {/* <Card style={{ width: '22rem', height: "15rem" }}>
-                    <AiFillNotification style={{ height: "4rem", fontSize: '40px' }} />
-                    <Card.Body>
-                        <Card.Title style={{ fontSize: "20px", height: "3rem" }}>News and Notice</Card.Title>
-                        <Card.Subtitle>
-                            Find News and Notice about exams and
-                            other events in our notice section.
-                        </Card.Subtitle>
-                        <Link to="/news" style={{ fontSize: "large", textDecoration: "none" }}>
-                        <Button variant="primary"
-                                style={{
-                                    cursor: "pointer",
-                                    marginTop: "20px",
-                                    height: "3rem",
-                                    width: "6rem",
-                                    borderRadius: "5px",
-                                    boxShadow: "2px 2px purple",
-                                    backgroundColor: "rgb(230, 161, 230)",
-                                    font: "message-box",
-                                    color: "black",
-                                    fontSize: "large"
-                                }}>Coming soon
-
-                            </Button>
-                        </Link>
-                    </Card.Body>
-                </Card> */}
             </div>
 
 

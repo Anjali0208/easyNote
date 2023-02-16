@@ -1,8 +1,7 @@
-
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  /* box-sizing: border-box; */
 }
 
 body {
@@ -10,7 +9,7 @@ body {
 }
 
 .menus {
-  /* display: flex; */   
+   
   align-items: center;
   flex-wrap: wrap;
   list-style: none;
@@ -33,15 +32,11 @@ body {
 
 .menu-items button {
   display: flex;
-  /* align-items: center; */
-
   color: blueviolet;
   font-size: inherit;
-
   border: none;
   background-color: transparent;
   cursor: pointer;
-  /* width: 100%; */
 }
 
 button span {
@@ -99,19 +94,3 @@ button span {
   
 }
 
-/* content */
-
-/* .content {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 3rem 20px;
-}
-
-.content h2 {
-  margin-bottom: 1rem;
-}
-
-.content a {
-  color: #cc3852;
-  margin-right: 10px;
-} */

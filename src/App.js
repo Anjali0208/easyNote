@@ -45,12 +45,12 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path='/course_mca_first' element={<Course1 />} />
         <Route path='/course_mca_second' element={<Course2 />} />
-        <Route path='/exam' element={<Exam />} />
+        {/* <Route path='/exam' element={<Exam />} /> */}
 
         {/* First Year */}
         <Route path="/ds" element={<DS />} />
         <Route path="/notes_ds" element={<NotesDS />} />
-        <Route path="/ds/ds_qp" element={<QPDS />} />
+        <Route path="/ds_qp" element={<QPDS />} />
 
         <Route path="/dbms" element={<DBMS />} />
         <Route path="/notes_dbms" element={<DBMSNotes />} />
